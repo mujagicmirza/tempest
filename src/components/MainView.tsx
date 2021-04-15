@@ -48,7 +48,7 @@ export default function MainView() {
           </View>
 
           <View style={{ flex: 10, justifyContent: 'center' }}>
-            <Text adjustsFontSizeToFit={true} numberOfLines={1} style={{ color: 'white', fontSize: 150, fontFamily: 'Roboto_100Thin' }}>{data.temperature}{degC}</Text>
+            <Text adjustsFontSizeToFit={true} numberOfLines={1} style={{ color: 'white', fontSize: 120, fontFamily: 'Roboto_100Thin' }}>{data.temperature}{degC}</Text>
             <View style={{ flexDirection: 'row' }}>
               {data.icon}
               <Text style={{ color: 'white', fontSize: 40, fontFamily: 'Roboto_100Thin', left: 5 }}>{data.weatherDescription}</Text>
