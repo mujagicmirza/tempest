@@ -8,7 +8,8 @@
 ## Korištenje
 Pri pokretanju aplikacije, bit će prikazano vrijeme trenutne lokacije uređanja (koja je bazirana na IP adresi uređaja).
 
-Lokacija se može pretražiti koristeći ime grada neovisno o jeziku, npr. `Beč`, `Vienna`, `Wien` ili koristeći ime grada i internacionalog koda države, npr. `Venice,US`, `Venice,IT`.
+### Pretraživanje
+Lokacija se može pretražiti koristeći ime grada neovisno o jeziku, npr. `Beč`, `Vienna`, `Wien` ili koristeći ime grada i internacionalog ISO alpha-2 koda države, npr. `Venice,US`, `Venice,IT` za gradove Venice, Sjedinjene Američke Države i Venecija, Italija respektivno.
 
 Za korištenje aplikacije je nužna internet veza.
 
