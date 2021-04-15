@@ -1,0 +1,1 @@
+![AppLogo](readmeItems/vedrLogo.png)

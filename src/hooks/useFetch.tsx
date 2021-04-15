@@ -50,8 +50,7 @@ export const useFetch = (city: string) => {
             [cloudyDay, cloudyNight],
         ]
 
-        // return bgs[weatherIdToIndex(weatherID)][dayNightIndex];
-        return bgs[8][0];
+        return bgs[weatherIdToIndex(weatherID)][dayNightIndex];
     }
 
     let icons = [
