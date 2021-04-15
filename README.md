@@ -6,7 +6,7 @@
 # O aplikaciji
 **Vedr** je web i mobilna aplikacija za Android i iOS uređaje koja elegantno prikazuje meteorološke informacije o odabranom gradu. U zavisnosti od meteorološkog stanja i trenutnog vremena, **Vedr** prikazuje i prikladnu pozadinsku sliku.
 ## Korištenje
-Pri pokretanju aplikacije, bit će prikazano vrijeme trenutne lokacije uređanja (koja je bazirana na IP adresi uređaja).
+Pri pokretanju aplikacije, bit će prikazano vrijeme trenutne lokacije uređaja (koja je bazirana na IP adresi uređaja).
 
 ### Pretraživanje
 Lokacija se može pretražiti koristeći ime grada neovisno o jeziku, npr. `Beč`, `Vienna`, `Wien` ili koristeći ime grada i internacionalog ISO alpha-2 koda države, npr. `Venice,US`, `Venice,IT` za gradove Venice, Sjedinjene Američke Države i Venecija, Italija respektivno.
