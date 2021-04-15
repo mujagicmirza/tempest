@@ -4,7 +4,7 @@
 ![AppLogo](readmeAssets/appDemo.png)
 
 # O aplikaciji
-**Vedr** je mobilna aplikacija za Android i iOS uređaje koja elegantno prikazuje meteorološke informacije o odabranom gradu. U zavisnosti od meteorološkog stanja i trenutnog vremena, **Vedr** prikazuje i prikladnu pozadinsku sliku.
+**Vedr** je web i mobilna aplikacija za Android i iOS uređaje koja elegantno prikazuje meteorološke informacije o odabranom gradu. U zavisnosti od meteorološkog stanja i trenutnog vremena, **Vedr** prikazuje i prikladnu pozadinsku sliku.
 ## Korištenje
 Pri pokretanju aplikacije, bit će prikazano vrijeme trenutne lokacije uređanja (koja je bazirana na IP adresi uređaja).
 
