@@ -26,7 +26,7 @@ export default function MainView() {
 
   return (
     <View style={{ flex: 1, backgroundColor: 'black', minHeight: Math.round(Dimensions.get('window').height) }}>
-      <ImageBackground source={background} style={{ flex: 1, justifyContent: 'center' }}>
+      <ImageBackground source={data.background} style={{ flex: 1, justifyContent: 'center' }}>
         <View style={{ position: 'absolute', top: 0, bottom: 0, right: 0, left: 0, backgroundColor: 'rgba(0,0,0,0.2)' }}></View>
 
         <View style={{ padding: 20, flex: 1, paddingVertical: 30 }}>

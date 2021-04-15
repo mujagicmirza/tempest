@@ -1,16 +1,57 @@
 import React, { useState, useEffect } from "react";
 import { Ionicons, Feather, Entypo } from '@expo/vector-icons'
 import { Alert } from "react-native";
+import moment from "moment";
+
+import defaultBG from '../assets/bgs/cloudyNight.jpg';
+
+import cloudyDay from '../assets/bgs/cloudyDay.jpg';
+import cloudyNight from '../assets/bgs/cloudyNight.jpg';
+
+import drizzleDay from '../assets/bgs/drizzleDay.jpg';
+import drizzleNight from '../assets/bgs/drizzleNight.jpg';
+
+import mistDay from '../assets/bgs/mist.jpg';
+import mistNight from '../assets/bgs/mist.jpg';
+
+import snowDay from '../assets/bgs/snow.jpg';
+import snowNight from '../assets/bgs/snow.jpg';
+
+import thunderstormDay from '../assets/bgs/thunderstormDay.jpg';
+import thunderstormNight from '../assets/bgs/thunderstormNight.jpg';
+
+import clearDay from '../assets/bgs/clearDay.jpg';
+import clearNight from '../assets/bgs/clearNight.jpg';
 
 export const useFetch = (city: string) => {
 
-    const getIconIndex = (id: number) => {
+    const weatherIdToIndex = (id: number) => {
         if (id <= 800) {
             return Math.floor(id / 100);
         }
         else {
             return Math.ceil(id / 100);
         }
+    }
+
+    const getBackground = (weatherID: number, currentHour: number) => {
+
+        let dayNightIndex = (currentHour > 5 && currentHour < 20) ? 0 : 1;
+        let bgs = [
+            [cloudyDay, cloudyNight],
+            [cloudyDay, cloudyNight],
+            [thunderstormDay, thunderstormNight],
+            [drizzleDay, drizzleNight],
+            [cloudyDay, cloudyNight],
+            [drizzleDay, drizzleNight],
+            [snowDay, snowNight],
+            [mistDay, mistNight],
+            [clearDay, clearNight],
+            [cloudyDay, cloudyNight],
+        ]
+
+        // return bgs[weatherIdToIndex(weatherID)][dayNightIndex];
+        return bgs[8][0];
     }
 
     let icons = [
@@ -30,18 +71,19 @@ export const useFetch = (city: string) => {
         name: 'Grad',
         country: 'DRŽAVA',
         temperature: 0,
-        time: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString(),
         weatherDescription: 'Opis vremena',
         icon: icons[8],
         weatherMain: 'Vrijeme',
         wind: 0,
         clouds: 0,
-        humidity: 0
+        humidity: 0,
+        background: cloudyNight
     }
 
     const [outputData, setOutputData] = useState(defaultData);
     const [loading, setLoading] = useState(true);
-    const [success,setSuccess] = useState(true);
+    const [success, setSuccess] = useState(true);
 
     useEffect(() => {
         setLoading(true);
@@ -59,17 +101,19 @@ export const useFetch = (city: string) => {
                 }
             })
             .then(result => {
+                let currentHour = moment().utc().add(result.timezone * 1000).hour();
                 setOutputData({
                     name: result.name,
                     country: result.sys.country,
                     temperature: Math.round((result.main.temp - 273.15) * 10) / 10,
-                    time: new Date(result.dt * 1000).toLocaleDateString(),
+                    time: moment().utc().add(result.timezone * 1000).format("HH:mm"),
                     weatherDescription: result.weather[0].description[0].toUpperCase() + result.weather[0].description.slice(1),
-                    icon: icons[getIconIndex(result.weather[0].id)],
+                    icon: icons[weatherIdToIndex(result.weather[0].id)],
                     weatherMain: result.weather[0].main,
                     wind: result.wind.speed,
                     clouds: result.clouds.all,
-                    humidity: result.main.humidity
+                    humidity: result.main.humidity,
+                    background: getBackground(result.weather[0].id,currentHour)
                 });
                 setLoading(false);
                 setSuccess(true);
