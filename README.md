@@ -1,10 +1,10 @@
-<h1 align='center'>Vedr</h1>
+<h1 align='center'>Tempest</h1>
 <h2 align='center'>Trenutno vrijeme, bilo gdje.</h2>
 
 ![AppLogo](readmeAssets/appDemo.png)
 
 # O aplikaciji
-**Vedr** je web i mobilna aplikacija za Android i iOS uređaje koja elegantno prikazuje meteorološke informacije o odabranom gradu. U zavisnosti od meteorološkog stanja i trenutnog vremena, **Vedr** prikazuje i prikladnu pozadinsku sliku.
+**Tempest** je web i mobilna aplikacija za Android i iOS uređaje koja elegantno prikazuje meteorološke informacije o odabranom gradu. U zavisnosti od meteorološkog stanja i trenutnog vremena, **Tempest** prikazuje i prikladnu pozadinsku sliku.
 ## Korištenje
 Pri pokretanju aplikacije, bit će prikazano vrijeme trenutne lokacije uređaja (koja je bazirana na IP adresi uređaja).
 
@@ -14,4 +14,4 @@ Lokacija se može pretražiti koristeći ime grada neovisno o jeziku, npr. `Beč
 Za korištenje aplikacije je nužna internet veza.
 
 # Tehničke informacije
-**Vedr** je razvijena koristeći **React Native** framework uz **Expo** platformu. Informacije o trenutnom vremenu u odabranom gradu se dobijaju koristeći **OpenWeatherMap API**.
+**Tempest** je razvijena koristeći **React Native** framework uz **Expo** platformu. Informacije o trenutnom vremenu u odabranom gradu se dobijaju koristeći **OpenWeatherMap API**.
